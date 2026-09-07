@@ -27,6 +27,11 @@
     xclip
     xdotool
     neovim
+    zip
+    unzip
+    nodejs
+    cargo
+    stylua
     catppuccin-cursors.mochaBlue
     nerd-fonts.jetbrains-mono
   ];
