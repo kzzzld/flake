@@ -36,9 +36,13 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.displayManager.lightdm.enable = false;
 
   # Enable i3 Window manager.
   services.xserver.windowManager.i3.enable = true;
+
+  # Enable Sway Window manager.
+  programs.sway.enable = true;
 
 
   

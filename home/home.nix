@@ -10,6 +10,7 @@
     alacritty
     vim
     librewolf
+    chromium
     picom
     feh
     rofi
@@ -33,6 +34,9 @@
     cargo
     stylua
     mpv
+    grim
+    wl-clipboard
+    swaybg
     catppuccin-cursors.mochaBlue
     nerd-fonts.jetbrains-mono
   ];
@@ -47,6 +51,7 @@
   home.file.".config/i3status".source = ./config/i3status;
   home.file.".config/alacritty".source = ./config/alacritty;
   home.file.".config/rofi".source = ./config/rofi;
+  home.file.".config/sway".source = ./config/sway;
   home.file.".config/nvim" = {
     source = ./config/nvim;
     recursive = true;
