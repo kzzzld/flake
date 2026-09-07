@@ -13,7 +13,7 @@
   outputs = {self, nixpkgs, home-manager, ...}@inputs: {
     nixosConfigurations.nixpc-btw = nixpkgs.lib.nixosSystem {
       modules = [
-        ./configuration.nix
+        ./hosts/nixpc-btw/configuration.nix
 
         home-manager.nixosModules.home-manager
         {
