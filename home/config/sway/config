@@ -168,6 +168,7 @@ bar {
   position top
   font pango:JetBrainsMono Nerd Font 11
   height 38
+  status_padding 5
   # padding 4px 10px
   colors {
     background         $base
