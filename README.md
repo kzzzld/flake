@@ -2,6 +2,9 @@
 
 My own NixOS configuration.
 
+> [!NOTE]
+> I don't use all configs here in [config](./home/config) folder. I only use some of them.
+
 ## Installation
 
 > [!NOTE]
@@ -12,3 +15,4 @@ git clone https://github.com/kzzzld/flake-btw ~/flake-btw
 cd ~/flake-btw
 sudo nixos-rebuild switch --flake .#nixpc-btw
 ```
+
