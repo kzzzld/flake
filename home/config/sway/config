@@ -167,6 +167,7 @@ bar {
   status_command i3status
   position top
   font pango:JetBrainsMono Nerd Font 11
+  height 38
   # padding 4px 10px
   colors {
     background         $base
