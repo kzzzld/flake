@@ -32,6 +32,7 @@
     nodejs
     cargo
     stylua
+    mpv
     catppuccin-cursors.mochaBlue
     nerd-fonts.jetbrains-mono
   ];
