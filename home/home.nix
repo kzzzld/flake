@@ -20,6 +20,7 @@
     tmuxinator
     eza
     starship
+    zoxide
     catppuccin-cursors.mochaBlue
     nerd-fonts.jetbrains-mono
   ];
