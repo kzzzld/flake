@@ -12,6 +12,7 @@
       librewolf
       chromium
       picom
+      xinit
       feh
       rofi
       git
@@ -75,14 +76,16 @@
   };
 
   home.file."Wallpapers".source = ./config/walls;
-  home.file.".config/i3".source = ./config/i3;
+  # home.file.".config/i3".source = ./config/i3;
   home.file.".config/i3status".source = ./config/i3status;
   home.file.".config/alacritty".source = ./config/alacritty;
   home.file.".config/rofi".source = ./config/rofi;
   home.file.".config/sway".source = ./config/sway;
+  home.file.".config/swaylock".source = ./config/swaylock;
+  # home.file.".xinitrc".source = ./config/xorg/xinitrc;
   home.file.".config/nvim" = {
     source = ./config/nvim;
     recursive = true;
   };
   home.file.".zshrc".source = ./config/zsh/zshrc;
-                      }
+}
