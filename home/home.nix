@@ -19,6 +19,8 @@
     tmux
     tmuxinator
     eza
+    zsh
+    starship
     catppuccin-cursors.mochaBlue
     nerd-fonts.jetbrains-mono
   ];
