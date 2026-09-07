@@ -46,7 +46,10 @@
   home.file.".config/i3status".source = ./config/i3status;
   home.file.".config/alacritty".source = ./config/alacritty;
   home.file.".config/rofi".source = ./config/rofi;
-  home.file.".config/nvim".source = ./config/nvim;
+  home.file.".config/nvim" = {
+    source = ./config/nvim;
+    recursive = true;
+  };
   home.file.".zshrc".source = ./config/zsh/zshrc;
   home.file.".config/gtk-3.0".source = ./config/gtk3;
 }
