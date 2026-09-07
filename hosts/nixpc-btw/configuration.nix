@@ -44,7 +44,11 @@
   # Enable Sway Window manager.
   programs.sway.enable = true;
 
-
+  nixpkgs.overlays = [
+      (self: super: {
+        swaylock = super.swaylock-effects;
+      })
+    ];
   
 
   # Configure keymap in X11

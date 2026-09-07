@@ -55,6 +55,9 @@ bindsym $mod+Return exec alacritty
 # start a file manager
 bindsym $mod+Shift+Return exec thunar
 
+# lock screen
+bindsym $mod+Control+q exec swaylock --screenshots --clock --effect-blur 7x5
+
 # kill focused window
 bindsym $mod+q kill
 
