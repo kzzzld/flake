@@ -37,6 +37,8 @@
     grim
     wl-clipboard
     swaybg
+    gcc
+    tree-sitter
     catppuccin-cursors.mochaBlue
     nerd-fonts.jetbrains-mono
   ];
