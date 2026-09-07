@@ -21,6 +21,7 @@
     eza
     starship
     zoxide
+    gajim
     catppuccin-cursors.mochaBlue
     nerd-fonts.jetbrains-mono
   ];
