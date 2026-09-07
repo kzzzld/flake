@@ -22,6 +22,10 @@
     starship
     zoxide
     gajim
+    nix-search-cli
+    maim
+    xclip
+    xdotool
     catppuccin-cursors.mochaBlue
     nerd-fonts.jetbrains-mono
   ];
