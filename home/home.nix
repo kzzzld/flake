@@ -7,44 +7,44 @@
 
   home.packages = with pkgs; [
     i3status
-      alacritty
-      vim
-      librewolf
-      chromium
-      picom
-      xinit
-      feh
-      rofi
-      git
-      lazygit
-      fastfetch
-      tmux
-      tmuxinator
-      eza
-      starship
-      zoxide
-      gajim
-      nix-search-cli
-      maim
-      xclip
-      xdotool
-      neovim
-      zip
-      unzip
-      nodejs
-      cargo
-      stylua
-      mpv
-      grim
-      wl-clipboard
-      swaybg
-      gcc
-      tree-sitter
-      slurp
-      thunar
-      nerd-fonts.jetbrains-mono
-      ];
+    alacritty
+    vim
+    librewolf
+    chromium
+    picom
+    xinit
+    feh
+    rofi
+    git
+    lazygit
+    fastfetch
+    tmux
+    tmuxinator
+    eza
+    starship
+    zoxide
+    gajim
+    nix-search-cli
+    maim
+    xclip
+    xdotool
+    neovim
+    zip
+    unzip
+    nodejs
+    cargo
+    stylua
+    mpv
+    grim
+    wl-clipboard
+    swaybg
+    gcc
+    tree-sitter
+    slurp
+    thunar
 
+    nerd-fonts.jetbrains-mono
+    ];
   xresources.properties = {
     "Xcursor.size" = 24;
     "Xcursor.theme" = "catppuccin-mocha-blue-cursors";
