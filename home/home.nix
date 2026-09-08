@@ -6,45 +6,52 @@
   };
 
   home.packages = with pkgs; [
+    # desktop utilities
     i3status
-    alacritty
-    vim
-    librewolf
-    chromium
     picom
-    xinit
-    feh
     rofi
-    git
-    lazygit
+    grim
+    wl-clipboard
+    swaybg
+    slurp
+
+    # other utilities
+    thunar
+    zip
+    unzip
+    nix-search-cli
+
+    # media
+    mpv
+
+    # terminal & shell
+    alacritty
     fastfetch
     tmux
     tmuxinator
     eza
     starship
     zoxide
-    gajim
-    nix-search-cli
-    maim
-    xclip
-    xdotool
+    git
+    lazygit
+
+    # programming
     neovim
-    zip
-    unzip
     nodejs
     cargo
     stylua
-    mpv
-    grim
-    wl-clipboard
-    swaybg
     gcc
     tree-sitter
-    slurp
-    thunar
+
+    # internet
+    librewolf
+    chromium
+    gajim
 
     # games
     xonotic
+
+    # fonts
     nerd-fonts.jetbrains-mono
     ];
 
