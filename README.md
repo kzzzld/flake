@@ -1,4 +1,4 @@
-# flake-btw
+# flake
 
 My own NixOS configuration.
 
@@ -11,8 +11,8 @@ My own NixOS configuration.
 > You should not use hardware-configuration.nix blindly.
 
 ```bash
-git clone https://github.com/kzzzld/flake-btw ~/flake-btw
-cd ~/flake-btw
+git clone https://github.com/kzzzld/flake ~/flake
+cd ~/flake
 sudo nixos-rebuild switch --flake .#nixpc-btw
 ```
 
