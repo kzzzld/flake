@@ -43,8 +43,11 @@
     slurp
     thunar
 
+    # games
+    xonotic
     nerd-fonts.jetbrains-mono
     ];
+
   xresources.properties = {
     "Xcursor.size" = 24;
     "Xcursor.theme" = "catppuccin-mocha-blue-cursors";
