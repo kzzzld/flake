@@ -12,7 +12,6 @@
   home.packages = with pkgs; [
     # desktop utilities
     i3status
-    picom
     rofi
     grim
     wl-clipboard
