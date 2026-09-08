@@ -1,4 +1,8 @@
-{ config, pkgs, ...}: {
+{
+  config,
+  pkgs,
+  ...
+}: {
   home = {
     username = "kzzzl";
     homeDirectory = "/home/kzzzl";
@@ -53,7 +57,7 @@
 
     # fonts
     nerd-fonts.jetbrains-mono
-    ];
+  ];
 
   xresources.properties = {
     "Xcursor.size" = 24;
@@ -66,7 +70,7 @@
     theme = {
       name = "catppuccin-mocha-blue-standard";
       package = pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
+        accents = ["blue"];
         variant = "mocha";
       };
     };
