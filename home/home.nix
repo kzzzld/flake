@@ -52,6 +52,7 @@
     gajim
 
     # games
+    steam
     xonotic
     ddnet
 
