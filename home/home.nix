@@ -55,6 +55,7 @@
     librewolf
     chromium
     gajim
+    signal-desktop
 
     # games
     xonotic
