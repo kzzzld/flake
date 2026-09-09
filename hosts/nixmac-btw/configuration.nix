@@ -13,6 +13,7 @@
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
+  boot.kernelParams = [ "appledrm.show_notch=1" ];
   boot.loader.efi.canTouchEfiVariables = false;
   hardware.asahi.enable = true;
 
