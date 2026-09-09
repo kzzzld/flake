@@ -3,7 +3,6 @@
   pkgs,
   ...
 }: {
-  
   home = {
     username = "kzzzl";
     homeDirectory = "/home/kzzzl";
@@ -68,6 +67,14 @@
   xresources.properties = {
     "Xcursor.size" = 24;
     "Xcursor.theme" = "catppuccin-mocha-blue-cursors";
+  };
+
+  home.pointerCursor = {
+    name = "catppuccin-mocha-blue-cursors";
+    package = pkgs.catppuccin-cursors.mochaBlue;
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
   };
 
   gtk = {

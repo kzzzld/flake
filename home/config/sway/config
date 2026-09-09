@@ -39,6 +39,9 @@ exec --no-startup-id swaybg -i ~/Wallpapers/dark-forest.jpg
 # Display
 output eDP-1 scale 1.6
 
+# Cursor
+seat * xcursor_theme catppuccin-mocha-blue-cursors 24
+
 # Touchpad
 input type:touchpad {
   dwt enabled
