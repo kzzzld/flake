@@ -1,25 +1,26 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
+
+{ config, lib, pkgs, ... }:
+
 {
-  config,
-  lib,
-  pkgs,
-  ...
-}: {
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-  ];
+  imports =
+    [ # Include the results of the hardware scan.
+      ./hardware-configuration.nix
+      # ./apple-silicon-support
+    ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.efi.canTouchEfiVariables = false;
+  hardware.asahi.enable = true;
 
-  networking.hostName = "nixpc-btw"; # Define your hostname.
+  networking.hostName = "nixmac-btw"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
+  networking.networkmanager.wifi.backend = "iwd";
 
   # Set your time zone.
   time.timeZone = "Europe/Istanbul";
@@ -37,103 +38,63 @@
   # };
 
   # Enable the X11 windowing system.
-  services.xserver.enable = false;
-  services.xserver.displayManager.lightdm.enable = false;
+  # services.xserver.enable = true;
 
-  # Enable i3 Window manager.
-  services.xserver.windowManager.i3.enable = false;
+
+  
+
+  # Configure keymap in X11
+  # services.xserver.xkb.layout = "us";
+  # services.xserver.xkb.options = "eurosign:e,caps:escape";
+
+  # Enable CUPS to print documents.
+  # services.printing.enable = true;
 
   # Enable Sway Window manager.
   programs.sway.enable = true;
 
-  nixpkgs.overlays = [
-    (self: super: {
-      swaylock = super.swaylock-effects;
-    })
-  ];
-
-  # Configure keymap in X11
-  services.xserver.xkb.layout = "us";
-  services.xserver.xkb.options = "ctrl:nocaps";
-
-  # Enable sound
+  # Enable sound.
+  # services.pulseaudio.enable = true;
+  # OR
   services.pipewire = {
     enable = true;
     pulse.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   programs.zsh.enable = true;
   users.users.kzzzl = {
     isNormalUser = true;
-    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for this user.
     shell = pkgs.zsh;
   };
 
-  # programs.firefox.enable = true;
-
-  # Enable unfree software (I know Stallman is going to hate me :( )
+  # Allow unfree software
   nixpkgs.config.allowUnfree = true;
 
   # Enable nix and flakes!
   nix.settings.extra-experimental-features = ["nix-command" "flakes"];
 
-  # Install some systemwide packages
-  programs.steam.enable = true;
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
+  # Enable GnuPG Agent
   programs.gnupg.agent = {
     enable = true;
   };
 
-  # NVIDIA
-  # TODO: DISABLE THIS IF YOU ARE NOT USING NVIDIA
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
-  };
-  services.xserver.videoDrivers = ["nvidia"];
-  hardware.nvidia = {
-    # Modesetting is required.
-    modesetting.enable = true;
-
-    forceFullCompositionPipeline = true;
-
-    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-    # Enable this if you have graphical corruption issues or application crashes after waking
-    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead
-    # of just the bare essentials.
-    powerManagement.enable = false;
-
-    # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
-    powerManagement.finegrained = false;
-
-    # Use the NVidia open source kernel module (not to be confused with the
-    # independent third-party "nouveau" open source driver).
-    # Support is limited to the Turing and later architectures. Full list of
-    # supported GPUs is at:
-    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus
-    # Only available from driver 515.43.04+
-    open = false;
-
-    # Enable the Nvidia settings menu,
-    # accessible via `nvidia-settings`.
-    nvidiaSettings = true;
-
-    # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
-  };
+  # Some programs need SUID wrappers, can be configured further or are
+  # started in user sessions.
+  # programs.mtr.enable = true;
+  # programs.gnupg.agent = {
+  #   enable = true;
+  #   enableSSHSupport = true;
+  # };
 
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
@@ -163,5 +124,7 @@
   # and migrated your data accordingly.
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
-  system.stateVersion = "26.05"; # Did you read the comment?
+  system.stateVersion = "25.11"; # Did you read the comment?
+
 }
+

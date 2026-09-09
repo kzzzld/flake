@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  
   home = {
     username = "kzzzl";
     homeDirectory = "/home/kzzzl";
@@ -55,7 +56,6 @@
     gajim
 
     # games
-    steam
     xonotic
     ddnet
 
@@ -100,6 +100,7 @@
   home.file.".config/rofi".source = ./config/rofi;
   home.file.".config/sway".source = ./config/sway;
   home.file.".config/swaylock".source = ./config/swaylock;
+  home.file.".gitconfig".source = ./config/git/gitconfig;
   # home.file.".xinitrc".source = ./config/xorg/xinitrc;
   home.file.".config/nvim" = {
     source = ./config/nvim;

@@ -8,12 +8,15 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    apple-silicon-support.url = "github:nix-community/nixos-apple-silicon";
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    apple-silicon-support,
     ...
   } @ inputs: {
     nixosConfigurations.nixpc-btw = nixpkgs.lib.nixosSystem {
@@ -21,6 +24,20 @@
         ./hosts/nixpc-btw/configuration.nix
 
         home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+          home-manager.users.kzzzl = import ./home/home.nix;
+        }
+      ];
+    };
+
+    nixosConfigurations.nixmac-btw = nixpkgs.lib.nixosSystem {
+      modules = [
+        ./hosts/nixmac-btw/configuration.nix
+
+        home-manager.nixosModules.home-manager
+	apple-silicon-support.nixosModules.apple-silicon-support
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
