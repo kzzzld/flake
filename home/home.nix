@@ -26,6 +26,7 @@
 
     # media
     mpv
+    obs-studio
 
     # terminal & shell
     alacritty
@@ -40,10 +41,12 @@
 
     # programming
     neovim
+    emacs
     nodejs
     cargo
     stylua
     gcc
+    cmake
     tree-sitter
 
     # internet
@@ -100,6 +103,10 @@
   # home.file.".xinitrc".source = ./config/xorg/xinitrc;
   home.file.".config/nvim" = {
     source = ./config/nvim;
+    recursive = true;
+  };
+  home.file.".emacs.d" = {
+    source = ./config/emacs;
     recursive = true;
   };
   home.file.".zshrc".source = ./config/zsh/zshrc;
