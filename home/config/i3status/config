@@ -22,7 +22,7 @@ order += "volume master"
 order += "tztime local"
 
 volume master {
-    format = "♪: %volume "
+    format = " ♪: %volume "
     format_muted = "♪: muted (%volume) "
     device = "pulse"
 }
@@ -38,7 +38,7 @@ ethernet _first_ {
 }
 
 battery 0 {
-        format = "󰁹: %percentage"
+        format = "󰁹: %percentage "
         path = "/sys/class/power_supply/macsmc-battery/uevent"
 }
 
