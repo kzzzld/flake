@@ -3,6 +3,7 @@
   pkgs,
   ...
 }: {
+  
   home = {
     username = "kzzzl";
     homeDirectory = "/home/kzzzl";
@@ -52,12 +53,8 @@
     gajim
 
     # games
-    steam
     xonotic
     ddnet
-
-    # fonts
-    nerd-fonts.jetbrains-mono
   ];
 
   xresources.properties = {
