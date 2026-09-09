@@ -1,19 +1,21 @@
 # Edit this configuration file to define what should be installed on
 # your system. Help is available in the configuration.nix(5) man page, on
 # https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-{ config, lib, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      # ./apple-silicon-support
-    ];
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    # ./apple-silicon-support
+  ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
-  boot.kernelParams = [ "appledrm.show_notch=1" ];
+  boot.kernelParams = ["appledrm.show_notch=1"];
   boot.loader.efi.canTouchEfiVariables = false;
   hardware.asahi.enable = true;
 
@@ -41,9 +43,6 @@
   # Enable the X11 windowing system.
   # services.xserver.enable = true;
 
-
-  
-
   # Configure keymap in X11
   # services.xserver.xkb.layout = "us";
   # services.xserver.xkb.options = "eurosign:e,caps:escape";
@@ -53,6 +52,12 @@
 
   # Enable Sway Window manager.
   programs.sway.enable = true;
+
+  nixpkgs.overlays = [
+    (self: super: {
+      swaylock = super.swaylock-effects;
+    })
+  ];
 
   # Enable sound.
   # services.pulseaudio.enable = true;
@@ -69,7 +74,7 @@
   programs.zsh.enable = true;
   users.users.kzzzl = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for this user.
+    extraGroups = ["wheel"]; # Enable ‘sudo’ for this user.
     shell = pkgs.zsh;
   };
 
@@ -126,6 +131,4 @@
   #
   # For more information, see `man configuration.nix` or https://nixos.org/manual/nixos/stable/options#opt-system.stateVersion .
   system.stateVersion = "25.11"; # Did you read the comment?
-
 }
-
