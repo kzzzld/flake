@@ -55,6 +55,9 @@
     # games
     xonotic
     ddnet
+
+    # fonts
+    nerd-fonts.jetbrains-mono
   ];
 
   xresources.properties = {
