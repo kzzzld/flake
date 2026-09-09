@@ -37,7 +37,7 @@
         ./hosts/nixmac-btw/configuration.nix
 
         home-manager.nixosModules.home-manager
-	apple-silicon-support.nixosModules.apple-silicon-support
+        apple-silicon-support.nixosModules.apple-silicon-support
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;

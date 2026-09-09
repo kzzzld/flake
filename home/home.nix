@@ -48,6 +48,8 @@
     stylua
     gcc
     cmake
+    gnumake
+    libtool
     tree-sitter
 
     # internet
