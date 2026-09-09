@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+BAT="/sys/class/power_supply/macsmc-battery"
+CAP=$(cat "$BAT/capacity")
+STATUS=$(cat "$BAT/status")
+
+if [ "$STATUS" = "Charging" ]; then
+  ICON="󰂄"
+else
+  if [ "$CAP" -ge 90 ]; then
+    ICON="󰁹"
+  elif [ "$CAP" -ge 75 ]; then
+    ICON="󰂀"
+  elif [ "$CAP" -ge 50 ]; then
+    ICON="󰁾"
+  elif [ "$CAP" -ge 25 ]; then
+    ICON="󰁻"
+  else
+    ICON="󰂃"
+  fi
+fi
+
+echo "${ICON}: ${CAP}% "
+echo "${CAP}%"
+
+if [ "$CAP" -le 15 ] && [ "$STATUS" != "Charging" ]; then
+  echo "#FF0000"
+  exit 33
+fi

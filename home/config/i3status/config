@@ -40,6 +40,7 @@ ethernet _first_ {
 battery 0 {
         format = "󰁹: %percentage "
         path = "/sys/class/power_supply/macsmc-battery/uevent"
+        last_full_capacity = true
         low_threshold = 15
         threshold_type = "percentage"
 }
