@@ -82,9 +82,6 @@
   nix.settings.extra-experimental-features = ["nix-command" "flakes"];
 
   # Install some systemwide packages
-  environment.systemPackages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
   programs.steam.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are

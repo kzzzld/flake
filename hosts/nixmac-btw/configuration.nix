@@ -72,11 +72,6 @@
     shell = pkgs.zsh;
   };
 
-  # Install some systemwide things
-  environment.systemPackages = with pkgs; [
-    nerd-fonts.jetbrains-mono
-  ];
-
   # Allow unfree software
   nixpkgs.config.allowUnfree = true;
 
