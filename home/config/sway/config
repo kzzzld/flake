@@ -179,8 +179,8 @@ client.urgent            $peach    $base $peach $overlay0  $peach
 client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
 client.background        $base
 
-gaps inner 5
-gaps outer 5
+gaps inner 10
+gaps outer 10
 
 # bar
 bar {
@@ -189,6 +189,7 @@ bar {
   font pango:JetBrainsMono Nerd Font 11
   height 38
   status_padding 5
+  gaps 0 40 0 40
   # padding 4px 10px
   colors {
     background         $base
