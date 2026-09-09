@@ -71,6 +71,12 @@ bindsym $mod+Shift+Return exec thunar
 
 # lock screen
 bindsym $mod+Control+q exec swaylock --screenshots --clock --effect-blur 7x5
+exec systemd-inhibit --what=handle-power-key sleep infinity
+bindsym XF86PowerOff exec swaylock --screenshots --clock --effect-blur 7x5
+
+# brightness
+bindsym XF86MonBrightnessUp exec brightnessctl set 2%+
+bindsym XF86MonBrightnessDown exec brightnessctl set 2%-
 
 # kill focused window
 bindsym $mod+q kill
