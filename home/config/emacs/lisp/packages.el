@@ -19,30 +19,30 @@
   :config
   (load-theme 'batppuccin-mocha t))
 
-;; (use-package evil
-;;   :init
-;;   (setq evil-want-integration t
-;;         evil-want-keybinding nil
-;;         evil-want-C-u-scroll t
-;;         evil-want-C-i-jump nil
-;;         evil-undo-system 'undo-redo)
-;;   :config
-;;   (evil-mode 1))
+(use-package evil
+  :init
+  (setq evil-want-integration t
+        evil-want-keybinding nil
+        evil-want-C-u-scroll t
+        evil-want-C-i-jump nil
+        evil-undo-system 'undo-redo)
+  :config
+  (evil-mode 1))
 
-;; (use-package evil-collection
-;;   :after evil
-;;   :config
-;;   (evil-collection-init))
+(use-package evil-collection
+  :after evil
+  :config
+  (evil-collection-init))
 
-;; (use-package evil-commentary
-;;   :after evil
-;;   :config
-;;   (evil-commentary-mode))
+(use-package evil-commentary
+  :after evil
+  :config
+  (evil-commentary-mode))
 
-;; (use-package evil-surround
-;;   :after evil
-;;   :config
-;;   (global-evil-surround-mode 1))
+(use-package evil-surround
+  :after evil
+  :config
+  (global-evil-surround-mode 1))
 
 (use-package org-tree-slide)
 
@@ -81,20 +81,20 @@
          ("C-x b" . consult-buffer)
          ("C-x f" . find-file)
          ("C-x r" . consult-ripgrep)
-         ;;:map evil-normal-state-map
+         :map evil-normal-state-map
 ))
 
 (use-package helm-lsp :commands helm-lsp-workspace-symbol)
 (use-package lsp-treemacs :commands lsp-treemacs-errors-list)
 
-;; (evil-set-leader 'normal (kbd "SPC"))
+(evil-set-leader 'normal (kbd "SPC"))
 
-;; (evil-define-key 'normal 'global
-;;   (kbd "<leader>ff") 'find-file
-;;   (kbd "<leader>fr") 'consult-recent-file
-;;   (kbd "<leader>bb") 'consult-buffer
-;;   (kbd "<leader>ps") 'consult-ripgrep
-;;   (kbd "<leader>SPC") 'execute-extended-command)
+(evil-define-key 'normal 'global
+  (kbd "<leader>ff") 'find-file
+  (kbd "<leader>fr") 'consult-recent-file
+  (kbd "<leader>bb") 'consult-buffer
+  (kbd "<leader>ps") 'consult-ripgrep
+  (kbd "<leader>SPC") 'execute-extended-command)
 
 (use-package which-key
     :config
@@ -114,9 +114,9 @@
         centaur-tabs-set-close-button nil
         centaur-tabs-set-modified-marker t)
   :bind
-  ;;(:map evil-normal-state-map
-    ;;    ("g t" . centaur-tabs-forward)
-  ;;      ("g T" . centaur-tabs-backward))
+  (:map evil-normal-state-map
+       ("g t" . centaur-tabs-forward)
+       ("g T" . centaur-tabs-backward))
 
   )
 
