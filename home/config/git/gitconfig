@@ -1,0 +1,10 @@
+[user]
+	name = kzzzld
+	email = kzzzl@kzzzl.xyz
+	signingkey = FB8CEF6F1B8BB36AAAFBD19F03D93A23E84B5716
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg
+[pull]
+	rebase = false
