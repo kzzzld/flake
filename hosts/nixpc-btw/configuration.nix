@@ -52,6 +52,9 @@
     })
   ];
 
+  # Enable udisks2
+  services.udisks2.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.options = "ctrl:nocaps";

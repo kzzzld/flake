@@ -46,6 +46,7 @@
     ];
   };
 
+
   # Set your time zone.
   time.timeZone = "Europe/Istanbul";
 
@@ -70,6 +71,9 @@
 
   # Enable CUPS to print documents.
   # services.printing.enable = true;
+
+  # Enable udisks2
+  services.udisks2.enable = true;
 
   # Enable Sway Window manager.
   programs.sway.enable = true;
