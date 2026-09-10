@@ -36,6 +36,28 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
+
+  services.resolved.enable = false;
+
+  networking = {
+    nameservers = ["127.0.0.1" "::1"];
+  };
+
+  services.dnscrypt-proxy = {
+    enable = true;
+    settings = {
+      listen_addresses = ["127.0.0.1:53" "[::1]:53"];
+    };
+  };
+
+  services.zapret = {
+    enable = true;
+    params = [
+      "--dpi-desync=fake"
+      "--dpi-desync-ttl=3"
+    ];
+  };
+
   # Enable the X11 windowing system.
   services.xserver.enable = false;
   services.xserver.displayManager.lightdm.enable = false;
