@@ -18,6 +18,7 @@
     wl-clipboard
     swaybg
     slurp
+    playerctl
 
     # other utilities
     thunar
