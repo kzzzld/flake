@@ -84,6 +84,9 @@ bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
 
+# mount storage automatically
+exec udiskie
+
 # kill focused window
 bindsym $mod+q kill
 

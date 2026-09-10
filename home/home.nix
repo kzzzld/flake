@@ -22,6 +22,8 @@
 
     # other utilities
     thunar
+    thunar-volman
+    udiskie
     zip
     unzip
     nix-search-cli
