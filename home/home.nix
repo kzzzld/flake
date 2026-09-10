@@ -43,7 +43,7 @@
 
     # programming
     neovim
-    emacs
+    emacs-pgtk
     nodejs
     cargo
     stylua
