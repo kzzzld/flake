@@ -57,6 +57,7 @@
     librewolf
     chromium
     gajim
+    vesktop
     signal-desktop
 
     # games
