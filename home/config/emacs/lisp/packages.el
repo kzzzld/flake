@@ -180,6 +180,8 @@
 
 (use-package vterm)
 
+(use-package elcord)
+
 (use-package chess)
 (use-package pacmacs)
 
