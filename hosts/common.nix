@@ -64,4 +64,9 @@
   programs.gnupg.agent = {
     enable = true;
   };
+
+  programs.virt-manager.enable = true;
+  users.groups.libvirtd.members = ["kzzzl"];
+  virtualisation.libvirtd.enable = true;
+  virtualisation.spiceUSBRedirection.enable = true;
 }
