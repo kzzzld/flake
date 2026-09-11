@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
 BAT="/sys/class/power_supply/macsmc-battery"
+
+if [ ! -d "$BAT" ]; then
+  exit 0 # there's no battery
+fi
+
 CAP=$(cat "$BAT/capacity")
 STATUS=$(cat "$BAT/status")
 
