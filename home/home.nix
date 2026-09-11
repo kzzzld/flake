@@ -66,6 +66,9 @@
     xonotic
     ddnet
 
+    # office
+    libreoffice-fresh
+
     # fonts
     nerd-fonts.jetbrains-mono
   ];
