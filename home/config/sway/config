@@ -64,7 +64,7 @@ bindsym $mod+Shift+s exec --no-startup-id grim -g "$(slurp)" - | wl-copy
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec foot
 
 # start a file manager
 bindsym $mod+Shift+Return exec thunar

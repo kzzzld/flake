@@ -33,7 +33,7 @@
     obs-studio
 
     # terminal & shell
-    alacritty
+    foot
     fastfetch
     tmux
     tmuxinator
