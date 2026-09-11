@@ -61,6 +61,7 @@
     gajim
     vesktop
     signal-desktop
+    thunderbird
 
     # games
     xonotic
