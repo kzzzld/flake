@@ -201,7 +201,7 @@ bar {
   gaps 0 40 0 40
   # padding 4px 10px
   colors {
-    background         $base
+    background         #ffffff00
     statusline         $text
     focused_statusline $text
     focused_separator  $base
