@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }: {
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   time.timeZone = "Europe/Istanbul";
 
   # Networking
@@ -45,7 +50,6 @@
     enable = true;
     pulse.enable = true;
   };
-
 
   programs.zsh.enable = true;
   users.users.kzzzl = {

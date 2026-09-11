@@ -24,7 +24,6 @@
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.wifi.backend = "iwd";
 
-
   # Set your time zone.
   time.timeZone = "Europe/Istanbul";
 
