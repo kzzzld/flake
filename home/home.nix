@@ -11,7 +11,6 @@
 
   home.packages = with pkgs; [
     # desktop utilities
-    i3status
     i3blocks
     rofi
     grim
@@ -111,9 +110,10 @@
 
   home.file."Wallpapers".source = ./config/walls;
   # home.file.".config/i3".source = ./config/i3;
-  home.file.".config/i3status".source = ./config/i3status;
+  # home.file.".config/i3status".source = ./config/i3status;
   home.file.".config/i3blocks".source = ./config/i3blocks;
-  home.file.".config/alacritty".source = ./config/alacritty;
+  # home.file.".config/alacritty".source = ./config/alacritty;
+  home.file.".config/foot".source = ./config/foot;
   home.file.".config/rofi".source = ./config/rofi;
   home.file.".config/sway".source = ./config/sway;
   home.file.".config/swaylock".source = ./config/swaylock;
