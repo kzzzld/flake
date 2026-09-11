@@ -22,29 +22,7 @@
   networking.hostName = "nixmac-btw"; # Define your hostname.
 
   # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
   networking.networkmanager.wifi.backend = "iwd";
-
-  services.resolved.enable = false;
-
-  networking = {
-    nameservers = ["127.0.0.1" "::1"];
-  };
-
-  services.dnscrypt-proxy = {
-    enable = true;
-    settings = {
-      listen_addresses = ["127.0.0.1:53" "[::1]:53"];
-    };
-  };
-
-  services.zapret = {
-    enable = true;
-    params = [
-      "--dpi-desync=fake"
-      "--dpi-desync-ttl=3"
-    ];
-  };
 
 
   # Set your time zone.
@@ -72,47 +50,8 @@
   # Enable CUPS to print documents.
   # services.printing.enable = true;
 
-  # Enable udisks2
-  services.udisks2.enable = true;
-
-  # Enable Sway Window manager.
-  programs.sway.enable = true;
-
-  nixpkgs.overlays = [
-    (self: super: {
-      swaylock = super.swaylock-effects;
-    })
-  ];
-
-  # Enable sound.
-  # services.pulseaudio.enable = true;
-  # OR
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  programs.zsh.enable = true;
-  users.users.kzzzl = {
-    isNormalUser = true;
-    extraGroups = ["wheel"]; # Enable ‘sudo’ for this user.
-    shell = pkgs.zsh;
-  };
-
-  # Allow unfree software
-  nixpkgs.config.allowUnfree = true;
-
-  # Enable nix and flakes!
-  nix.settings.extra-experimental-features = ["nix-command" "flakes"];
-
-  # Enable GnuPG Agent
-  programs.gnupg.agent = {
-    enable = true;
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -125,7 +64,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+  services.openssh.enable = false;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

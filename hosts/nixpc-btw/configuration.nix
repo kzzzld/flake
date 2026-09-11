@@ -18,12 +18,6 @@
 
   networking.hostName = "nixpc-btw"; # Define your hostname.
 
-  # Configure network connections interactively with nmcli or nmtui.
-  networking.networkmanager.enable = true;
-
-  # Set your time zone.
-  time.timeZone = "Europe/Istanbul";
-
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
@@ -36,85 +30,12 @@
   #   useXkbConfig = true; # use xkb.options in tty.
   # };
 
-
-  services.resolved.enable = false;
-
-  networking = {
-    nameservers = ["127.0.0.1" "::1"];
-  };
-
-  services.dnscrypt-proxy = {
-    enable = true;
-    settings = {
-      listen_addresses = ["127.0.0.1:53" "[::1]:53"];
-    };
-  };
-
-  services.zapret = {
-    enable = true;
-    params = [
-      "--dpi-desync=fake"
-      "--dpi-desync-ttl=3"
-    ];
-  };
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = false;
-  services.xserver.displayManager.lightdm.enable = false;
-
-  # Enable i3 Window manager.
-  services.xserver.windowManager.i3.enable = false;
-
-  # Enable Sway Window manager.
-  programs.sway.enable = true;
-
-  nixpkgs.overlays = [
-    (self: super: {
-      swaylock = super.swaylock-effects;
-    })
-  ];
-
-  # Enable udisks2
-  services.udisks2.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb.layout = "us";
   services.xserver.xkb.options = "ctrl:nocaps";
 
-  # Enable sound
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  programs.zsh.enable = true;
-  users.users.kzzzl = {
-    isNormalUser = true;
-    extraGroups = ["wheel"]; # Enable ‘sudo’ for the user.
-    shell = pkgs.zsh;
-  };
-
-  # programs.firefox.enable = true;
-
-  # Enable unfree software (I know Stallman is going to hate me :( )
-  nixpkgs.config.allowUnfree = true;
-
-  # Enable nix and flakes!
-  nix.settings.extra-experimental-features = ["nix-command" "flakes"];
-
   # Install some systemwide packages
   programs.steam.enable = true;
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-  };
 
   # NVIDIA
   # TODO: DISABLE THIS IF YOU ARE NOT USING NVIDIA

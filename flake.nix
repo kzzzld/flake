@@ -22,6 +22,7 @@
     nixosConfigurations.nixpc-btw = nixpkgs.lib.nixosSystem {
       modules = [
         ./hosts/nixpc-btw/configuration.nix
+        ./hosts/common.nix
 
         home-manager.nixosModules.home-manager
         {
@@ -35,6 +36,7 @@
     nixosConfigurations.nixmac-btw = nixpkgs.lib.nixosSystem {
       modules = [
         ./hosts/nixmac-btw/configuration.nix
+        ./hosts/common.nix
 
         home-manager.nixosModules.home-manager
         apple-silicon-support.nixosModules.apple-silicon-support
