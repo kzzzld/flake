@@ -198,7 +198,7 @@ bar {
   font pango:JetBrainsMono Nerd Font 11
   height 38
   status_padding 5
-  gaps 0 40 0 40
+  gaps 0 50 0 50
   # padding 4px 10px
   colors {
     background         #ffffff00
