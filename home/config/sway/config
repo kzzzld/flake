@@ -34,7 +34,7 @@ set $mod Mod4
 font pango:JetBrainsMono Nerd Font 8
 
 # Wallpaper
-exec --no-startup-id swaybg -i ~/Wallpapers/dark-forest.jpg
+exec --no-startup-id swaybg -i ~/Wallpapers/pacman.png
 
 # Display
 output eDP-1 scale 1.6
