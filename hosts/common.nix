@@ -33,8 +33,9 @@
   # Enable udisks2.
   services.udisks2.enable = true;
 
-  # Enable Sway Window manager.
+  # Enable Window managers.
   programs.sway.enable = true;
+  programs.mango.enable = true;
   services.xserver.displayManager.lightdm.enable = false;
 
   nixpkgs.overlays = [

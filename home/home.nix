@@ -1,8 +1,18 @@
 {
   config,
   pkgs,
+  inputs,
   ...
-}: {
+}: let
+  waybar-git = pkgs.waybar.overrideAttrs (old: {
+    src = builtins.fetchGit {
+      url = "https://github.com/Alexays/Waybar";
+      ref = "master";
+      rev = "6d60c8e02be67bb85bb9b1ea803f2fbcf0722002";
+    };
+    mesonFlags = (old.mesonFlags or []) ++ [ "-Dwwan=disabled" "-Dcava=disabled" ];
+  });
+in {
   home = {
     username = "kzzzl";
     homeDirectory = "/home/kzzzl";
@@ -12,6 +22,7 @@
   home.packages = with pkgs; [
     # desktop utilities
     i3blocks
+    waybar-git
     rofi
     grim
     wl-clipboard
@@ -119,6 +130,8 @@
   home.file.".config/foot".source = ./config/foot;
   home.file.".config/rofi".source = ./config/rofi;
   home.file.".config/sway".source = ./config/sway;
+  home.file.".config/mango".source = ./config/mango;
+  home.file.".config/waybar".source = ./config/waybar;
   home.file.".config/swaylock".source = ./config/swaylock;
   home.file.".gitconfig".source = ./config/git/gitconfig;
   # home.file.".xinitrc".source = ./config/xorg/xinitrc;
