@@ -78,7 +78,7 @@ in {
     ddnet
 
     # office
-    libreoffice-fresh
+    libreoffice-stable
 
     # fonts
     nerd-fonts.jetbrains-mono
