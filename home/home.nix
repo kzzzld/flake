@@ -33,6 +33,7 @@ in {
     # other utilities
     thunar
     thunar-volman
+    satty
     udiskie
     zip
     unzip
