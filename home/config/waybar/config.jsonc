@@ -13,6 +13,7 @@
     "mango/workspaces"
   ],
   "modules-right": [
+    "battery",
     "tray",
     "pulseaudio",
     "clock"
@@ -146,7 +147,7 @@
       "warning": 20,
       "critical": 10
     },
-    "format": "{icon}",
+    "format": "{icon}  {capacity}%",
     "format-icons": ["", "", "", "", ""],
     "max-length": 25
   }
