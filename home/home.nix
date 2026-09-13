@@ -12,6 +12,11 @@
     };
     mesonFlags = (old.mesonFlags or []) ++ [ "-Dwwan=disabled" "-Dcava=disabled" ];
   });
+
+  catppuccinTheme = pkgs.catppuccin-gtk.override {
+    accents = ["blue"];
+    variant = "mocha";
+  };
 in {
   home = {
     username = "kzzzl";
@@ -57,6 +62,7 @@ in {
     # programming
     neovim
     emacs-pgtk
+    vscode
     nodejs
     cargo
     stylua
@@ -68,8 +74,7 @@ in {
 
     # internet
     librewolf
-    chromium
-    gajim
+    dino
     vesktop
     signal-desktop
     thunderbird
@@ -103,10 +108,7 @@ in {
 
     theme = {
       name = "catppuccin-mocha-blue-standard";
-      package = pkgs.catppuccin-gtk.override {
-        accents = ["blue"];
-        variant = "mocha";
-      };
+      package = catppuccinTheme;
     };
 
     iconTheme = {
@@ -120,6 +122,17 @@ in {
     cursorTheme = {
       name = "catppuccin-mocha-blue-cursors";
       package = pkgs.catppuccin-cursors.mochaBlue;
+    };
+  };
+
+  # Theme
+  xdg.configFile."gtk-4.0/assets".source = "${catppuccinTheme}/share/themes/catppuccin-mocha-blue-standard/gtk-4.0/assets";
+  xdg.configFile."gtk-4.0/gtk.css".source = "${catppuccinTheme}/share/themes/catppuccin-mocha-blue-standard/gtk-4.0/gtk.css";
+  xdg.configFile."gtk-4.0/gtk-dark.css".source = "${catppuccinTheme}/share/themes/catppuccin-mocha-blue-standard/gtk-4.0/gtk-dark.css";
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
     };
   };
 
