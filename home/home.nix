@@ -10,7 +10,7 @@
       ref = "master";
       rev = "6d60c8e02be67bb85bb9b1ea803f2fbcf0722002";
     };
-    mesonFlags = (old.mesonFlags or []) ++ [ "-Dwwan=disabled" "-Dcava=disabled" ];
+    mesonFlags = (old.mesonFlags or []) ++ ["-Dwwan=disabled" "-Dcava=disabled"];
   });
 
   catppuccinTheme = pkgs.catppuccin-gtk.override {
@@ -133,6 +133,10 @@ in {
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
+    };
+
+    "org/gnome/desktop/wm/preferences" = {
+      button-layout = "";
     };
   };
 
