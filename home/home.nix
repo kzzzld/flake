@@ -74,7 +74,6 @@ in {
 
     # internet
     librewolf
-    inputs.helium.packages.${pkgs.system}.default
     dino
     vesktop
     signal-desktop
