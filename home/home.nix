@@ -24,6 +24,9 @@ in {
     stateVersion = "26.05";
   };
 
+  # some user services
+  services.ollama.enable = true;
+
   home.packages = with pkgs; [
     # desktop utilities
     i3blocks
