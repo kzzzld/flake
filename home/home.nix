@@ -29,7 +29,6 @@ in {
 
   home.packages = with pkgs; [
     # desktop utilities
-    i3blocks
     waybar-git
     rofi
     grim
@@ -46,6 +45,7 @@ in {
     zip
     unzip
     nix-search-cli
+    pinentry-gnome3
 
     # media
     mpv
@@ -61,6 +61,7 @@ in {
     zoxide
     git
     lazygit
+    rbw
 
     # programming
     neovim
@@ -79,6 +80,7 @@ in {
     librewolf
     dino
     vesktop
+    halloy
     signal-desktop
     thunderbird
 
@@ -150,6 +152,7 @@ in {
   home.file.".config/waybar".source = ./config/waybar;
   home.file.".config/swaylock".source = ./config/swaylock;
   home.file.".gitconfig".source = ./config/git/gitconfig;
+  home.file.".config/halloy".source = ./config/halloy;
   home.file.".config/nvim" = {
     source = ./config/nvim;
     recursive = true;
