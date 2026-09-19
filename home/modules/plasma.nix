@@ -26,7 +26,7 @@
         theme = "Breeze";
       };
       iconTheme = "Papirus-Dark";
-      wallpaper = ./config/walls/jellyfish.jpg;
+      wallpaper = ../walls/jellyfish.jpg;
     };
 
     hotkeys.commands."terminal" = {

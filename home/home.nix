@@ -76,7 +76,6 @@
     nerd-fonts.jetbrains-mono
   ];
 
-  home.file."Wallpapers".source = ./config/walls;
   home.file.".config/nvim" = {
     source = ./config/nvim;
     recursive = true;
