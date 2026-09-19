@@ -48,8 +48,8 @@
         middleButtonEmulation = true;
         tapToClick = false;
         naturalScroll = false;
-        productId = "849";
-        vendorId = "1452";
+        vendorId = "05ac";
+        productId = "0351";
         name = "Apple MTP multi-touch";
       }
     ];
@@ -83,8 +83,9 @@
                 "applications:librewolf.desktop"
                 "applications:foot.desktop"
                 "applications:org.kde.dolphin.desktop"
+                "applications:org.gajim.Gajim.desktop"
                 "applications:org.squidowl.halloy.desktop"
-                "applications:im.dino.Dino.desktop"
+                "applications:vesktop.desktop"
               ];
             };
           }
