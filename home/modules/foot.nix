@@ -11,10 +11,6 @@
       colors-dark = {
           alpha = 0.9;
       };
-
-      csd = {
-          preferred = "none";
-      };
     };
   };
 }
