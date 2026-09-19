@@ -4,16 +4,14 @@
   inputs,
   ...
 }: {
-
   imports = [
     ./modules/catppuccin.nix
     ./modules/plasma.nix
     ./modules/foot.nix
     ./modules/halloy.nix
     ./modules/bitwarden.nix
+    ./modules/git.nix
   ];
-
-
 
   home = {
     username = "kzzzl";
@@ -45,7 +43,6 @@
     eza
     starship
     zoxide
-    git
     lazygit
 
     # programming
@@ -80,7 +77,6 @@
   ];
 
   home.file."Wallpapers".source = ./config/walls;
-  home.file.".gitconfig".source = ./config/git/gitconfig;
   home.file.".config/nvim" = {
     source = ./config/nvim;
     recursive = true;
