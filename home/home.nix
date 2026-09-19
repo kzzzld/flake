@@ -8,6 +8,7 @@
     ./modules/catppuccin.nix
     ./modules/plasma.nix
     ./modules/foot.nix
+    ./modules/kitty.nix
     ./modules/halloy.nix
     ./modules/bitwarden.nix
     ./modules/git.nix
