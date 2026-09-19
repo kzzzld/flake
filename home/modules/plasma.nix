@@ -30,9 +30,9 @@
     };
 
     hotkeys.commands."terminal" = {
-      name = "Launch Foot";
+      name = "Launch Terminal";
       key = "Meta+Return";
-      command = "foot";
+      command = "kitty";
     };
 
     fonts = {
@@ -81,7 +81,7 @@
             iconTasks = {
               launchers = [
                 "applications:librewolf.desktop"
-                "applications:foot.desktop"
+                "applications:kitty.desktop"
                 "applications:org.kde.dolphin.desktop"
                 "applications:org.gajim.Gajim.desktop"
                 "applications:org.squidowl.halloy.desktop"
