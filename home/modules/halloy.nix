@@ -5,9 +5,9 @@
       theme = "catppuccin-mocha";
       servers.libera = {
         nickname = "kzzzl/libera";
-        server = "znc.kzzzl.xyz";
+        server = "soju.kzzzl.xyz";
         password_command = "rbw get znc_libera";
-        port = 5001;
+        port = 6003;
         use_tls = true;
       };
     };
