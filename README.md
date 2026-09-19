@@ -18,7 +18,24 @@ My own NixOS configuration.
 ```bash
 git clone https://github.com/kzzzld/flake ~/flake
 cd ~/flake
+
+# for nixmac-btw
+# NOTE: You should use --impure if you are in Asahi. Because Asahi needs to read firmware.cpio and it's in /boot.
+# NOTE: You may ask, why we don't move that file to flake. If you move that and accidentally push it, you can get DMCA.
+# NOTE: And, without --impure Nix flake can't read file outside from flake.
+cp /etc/nixos/hardware-configuration.nix ./hosts/nixmac-btw/hardware-configuration.nix
+sudo nixos-rebuild switch --flake .#nixmac-btw --impure
+
+# for nixpc-btw
+cp /etc/nixos/hardware-configuration.nix ./hosts/nixpc-btw/hardware-configuration.nix
 sudo nixos-rebuild switch --flake .#nixpc-btw
+
+# then commit hardware-configuration.nix file
+git add .
+git commit -m "feat: update hardware-configuration.nix file for newly installed system"
+
+# then you can push it when you want
+git push
 ```
 
 ## Contributing
