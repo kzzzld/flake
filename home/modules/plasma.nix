@@ -1,29 +1,26 @@
-{ pkgs, inputs, ... }: {
-    imports = [inputs.plasma-manager.homeModules.plasma-manager];
+{
+  pkgs,
+  inputs,
+  ...
+}: {
+  imports = [inputs.plasma-manager.homeModules.plasma-manager];
 
-
-   home.packages = with pkgs; [
-
+  home.packages = with pkgs; [
     (catppuccin-kde.override {
-      flavour = [ "mocha" ];
+      flavour = ["mocha"];
     })
     (pkgs.catppuccin-papirus-folders.override {
       flavor = "mocha";
       accent = "blue";
     })
-
-   ];
+  ];
 
   programs.plasma = {
-      enable = true;
+    enable = true;
 
-      workspace = {
+    workspace = {
       clickItemTo = "open"; # If you liked the click-to-open default from plasma 5
       colorScheme = "Catppuccin-Mocha-Blue";
-      cursor = {
-        theme = "catppuccin-mocha-blue-cursors";
-        size = 32;
-      };
       windowDecorations = {
         library = "org.kde.breeze";
         theme = "Breeze";
@@ -45,7 +42,8 @@
       };
     };
 
-    input.touchpads = [{
+    input.touchpads = [
+      {
         enable = true;
         middleButtonEmulation = true;
         tapToClick = false;
@@ -53,16 +51,17 @@
         productId = "849";
         vendorId = "1452";
         name = "Apple MTP multi-touch";
-      }];
+      }
+    ];
 
-      shortcuts = {
-  kwin = {
-    "Window Close" = "Meta+Q";
-  };
-  plasmashell = {
-    "Show Activity Switcher" = "none";
-  };
-};
+    shortcuts = {
+      kwin = {
+        "Window Close" = "Meta+Q";
+      };
+      plasmashell = {
+        "Show Activity Switcher" = "none";
+      };
+    };
 
     panels = [
       # Windows-like panel at the bottom
@@ -84,10 +83,12 @@
                 "applications:librewolf.desktop"
                 "applications:foot.desktop"
                 "applications:org.kde.dolphin.desktop"
+                "applications:org.squidowl.halloy.desktop"
+                "applications:im.dino.Dino.desktop"
               ];
             };
           }
-          
+
           "org.kde.plasma.marginsseparator"
 
           {
@@ -104,7 +105,7 @@
               ];
             };
           }
-          
+
           {
             digitalClock = {
               calendar.firstDayOfWeek = "monday";
