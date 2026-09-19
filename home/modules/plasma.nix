@@ -20,7 +20,7 @@
 
     workspace = {
       clickItemTo = "open"; # If you liked the click-to-open default from plasma 5
-      colorScheme = "Catppuccin-Mocha-Blue";
+      colorScheme = "CatppuccinMochaBlue";
       windowDecorations = {
         library = "org.kde.breeze";
         theme = "Breeze";
