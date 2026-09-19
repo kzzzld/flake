@@ -36,6 +36,9 @@
 
   # Install some systemwide packages
   programs.steam.enable = true;
+  environment.systemPackages = with pkgs; [
+    heroic
+  ];
 
   # NVIDIA
   # TODO: DISABLE THIS IF YOU ARE NOT USING NVIDIA
