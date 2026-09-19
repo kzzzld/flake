@@ -26,7 +26,7 @@ sudo nixos-rebuild switch --flake .#nixpc-btw
 It's my own personal repo but I'm welcome for pull requests, issues etc. If you want to merge code, please ensure it's formatted. To format file, you can use alejandra.
 
 ```bash
-nix-shell -p alejandra --run "alejandra ."
+nix shell nixpkgs#alejandra -c alejandra .
 ```
 
 **Why Alejandra?** Because I like how it formats the code.
