@@ -36,6 +36,7 @@
   # Enable Window managers.
   programs.sway.enable = true;
   programs.mango.enable = true;
+  services.desktopManager.plasma6.enable = true;
 
   services.xserver.displayManager.lightdm.enable = false;
 

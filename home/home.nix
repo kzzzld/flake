@@ -3,21 +3,18 @@
   pkgs,
   inputs,
   ...
-}: let
-  waybar-git = pkgs.waybar.overrideAttrs (old: {
-    src = builtins.fetchGit {
-      url = "https://github.com/Alexays/Waybar";
-      ref = "master";
-      rev = "6d60c8e02be67bb85bb9b1ea803f2fbcf0722002";
-    };
-    mesonFlags = (old.mesonFlags or []) ++ ["-Dwwan=disabled" "-Dcava=disabled"];
-  });
+}: {
 
-  catppuccinTheme = pkgs.catppuccin-gtk.override {
-    accents = ["blue"];
-    variant = "mocha";
-  };
-in {
+  imports = [
+    ./modules/catppuccin.nix
+    ./modules/plasma.nix
+    ./modules/foot.nix
+    ./modules/halloy.nix
+    ./modules/bitwarden.nix
+  ];
+
+
+
   home = {
     username = "kzzzl";
     homeDirectory = "/home/kzzzl";
@@ -28,31 +25,20 @@ in {
   services.ollama.enable = true;
 
   home.packages = with pkgs; [
-    # desktop utilities
-    waybar-git
-    rofi
-    grim
+    # utilities
     wl-clipboard
-    swaybg
-    slurp
     playerctl
-
-    # other utilities
-    thunar
-    thunar-volman
-    satty
     udiskie
     zip
     unzip
     nix-search-cli
-    pinentry-gnome3
+    pinentry-qt
 
     # media
     mpv
     obs-studio
 
     # terminal & shell
-    foot
     fastfetch
     tmux
     tmuxinator
@@ -61,7 +47,6 @@ in {
     zoxide
     git
     lazygit
-    rbw
 
     # programming
     neovim
@@ -80,7 +65,6 @@ in {
     librewolf
     dino
     vesktop
-    halloy
     signal-desktop
     thunderbird
 
@@ -95,64 +79,8 @@ in {
     nerd-fonts.jetbrains-mono
   ];
 
-  xresources.properties = {
-    "Xcursor.size" = 24;
-    "Xcursor.theme" = "catppuccin-mocha-blue-cursors";
-  };
-
-  home.pointerCursor = {
-    name = "catppuccin-mocha-blue-cursors";
-    package = pkgs.catppuccin-cursors.mochaBlue;
-    size = 24;
-    gtk.enable = true;
-    x11.enable = true;
-  };
-
-  gtk = {
-    enable = true;
-
-    theme = {
-      name = "catppuccin-mocha-blue-standard";
-      package = catppuccinTheme;
-    };
-
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.catppuccin-papirus-folders.override {
-        flavor = "mocha";
-        accent = "blue";
-      };
-    };
-
-    cursorTheme = {
-      name = "catppuccin-mocha-blue-cursors";
-      package = pkgs.catppuccin-cursors.mochaBlue;
-    };
-  };
-
-  # Theme
-  xdg.configFile."gtk-4.0/assets".source = "${catppuccinTheme}/share/themes/catppuccin-mocha-blue-standard/gtk-4.0/assets";
-  xdg.configFile."gtk-4.0/gtk.css".source = "${catppuccinTheme}/share/themes/catppuccin-mocha-blue-standard/gtk-4.0/gtk.css";
-  xdg.configFile."gtk-4.0/gtk-dark.css".source = "${catppuccinTheme}/share/themes/catppuccin-mocha-blue-standard/gtk-4.0/gtk-dark.css";
-
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      color-scheme = "prefer-dark";
-    };
-
-    "org/gnome/desktop/wm/preferences" = {
-      button-layout = "";
-    };
-  };
-
   home.file."Wallpapers".source = ./config/walls;
-  home.file.".config/foot".source = ./config/foot;
-  home.file.".config/rofi".source = ./config/rofi;
-  home.file.".config/mango".source = ./config/mango;
-  home.file.".config/waybar".source = ./config/waybar;
-  home.file.".config/swaylock".source = ./config/swaylock;
   home.file.".gitconfig".source = ./config/git/gitconfig;
-  home.file.".config/halloy".source = ./config/halloy;
   home.file.".config/nvim" = {
     source = ./config/nvim;
     recursive = true;
@@ -162,11 +90,4 @@ in {
     recursive = true;
   };
   home.file.".zshrc".source = ./config/zsh/zshrc;
-
-  # home.file.".xinitrc".source = ./config/xorg/xinitrc;
-  # home.file.".config/i3".source = ./config/i3;
-  # home.file.".config/i3status".source = ./config/i3status;
-  # home.file.".config/i3blocks".source = ./config/i3blocks;
-  # home.file.".config/alacritty".source = ./config/alacritty;
-  # home.file.".config/sway".source = ./config/sway;
 }
