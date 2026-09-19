@@ -60,7 +60,7 @@
 
     # internet
     librewolf
-    dino
+    gajim
     vesktop
     signal-desktop
     thunderbird
