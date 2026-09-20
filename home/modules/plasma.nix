@@ -32,6 +32,10 @@
         "Plugins" = {
           "krohnkiteEnabled" = true;
         };
+
+        "Script-krohnkite" = {
+          "floatingClass" = "mpv";
+        };
       };
 
       # "kwinrulesrc" = {
