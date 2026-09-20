@@ -13,10 +13,64 @@
       flavor = "mocha";
       accent = "blue";
     })
+
+    kdePackages.krohnkite
+
   ];
 
   programs.plasma = {
     enable = true;
+
+    configFile = {
+      "breezerc"."Common" = {
+        ShadowSize = "ShadowNone";
+        ShadowStrength = 0;
+      };
+      "kwinrc" = {
+        "Windows"."FocusPolicy" = "FocusFollowsMouse";
+
+        "Plugins" = {
+          "krohnkiteEnabled" = true;
+        };
+      };
+
+      # "kwinrulesrc" = {
+      #   "1" = {
+      #     Description = "Remove all titlebars";
+      #     noborder = true;
+      #     noborderrule = 2;
+      #     types = 4294967295;
+      #     wmclass = "";
+      #     wmclasscomplete = false;
+      #     wmclassmatch = 0;
+      #   };
+      #
+      #   General = {
+      #     count = 1;
+      #     rules = "1";
+      #   };
+      # };
+
+    };
+
+
+     window-rules = [
+      {
+        description = "Remove Titlebar";
+        match = {
+          window-class = {
+            value = ".*";
+            type = "regex";
+          };
+        };
+        apply = {
+          noborder = {
+            value = true;
+            apply = "force";
+          };
+        };
+      }
+    ];
 
     workspace = {
       clickItemTo = "open"; # If you liked the click-to-open default from plasma 5
@@ -75,52 +129,51 @@
         "Window to Desktop 4" = "Meta+$";
         "Window to Desktop 5" = "Meta+%";
         "Window to Desktop 6" = "Meta+^";
+
+        "KrohnkiteFocusLeft" = "Meta+H";
+        "KrohnkiteFocusDown" = "Meta+J";
+        "KrohnkiteFocusUp" = "Meta+K";
+        "KrohnkiteFocusRight" = "Meta+L";
       };
+
       plasmashell = {
         "Show Activity Switcher" = "none";
       };
+
+      ksmserver = {
+        "Lock Session" = "Meta+Ctrl+Q";
+      };
+    };
+
+    krunner = {
+      position = "center";
+      shortcuts.launch = "Meta+Space";
     };
 
     panels = [
-      # Windows-like panel at the bottom
       {
         location = "top";
         widgets = [
-          {
-            kickoff = {
-              sortAlphabetically = true;
-              icon = "nix-snowflake-white";
-            };
-          }
-          # Adding configuration to the widgets can also for example be used to
-          # pin apps to the task-manager, which this example illustrates by
-          # pinning dolphin and konsole to the task-manager by default with widget-specific options.
-          {
-            iconTasks = {
-              launchers = [
-                "applications:librewolf.desktop"
-                "applications:kitty.desktop"
-                "applications:org.kde.dolphin.desktop"
-                "applications:org.gajim.Gajim.desktop"
-                "applications:org.squidowl.halloy.desktop"
-                "applications:vesktop.desktop"
-              ];
-            };
-          }
 
-          "org.kde.plasma.marginsseparator"
+        {
+        name = "org.kde.plasma.panelspacer";
+        config.General = {
+          expanding = false;
+          length = 12;
+        };
+      }
 
           "org.kde.plasma.pager"
 
+          "org.kde.plasma.panelspacer"
+
           {
             systemTray.items = {
-              # We explicitly show bluetooth and battery
               shown = [
                 "org.kde.plasma.battery"
                 "org.kde.plasma.bluetooth"
                 "org.kde.plasma.volume"
               ];
-              # And explicitly hide networkmanagement and volume
               hidden = [
                 "org.kde.plasma.networkmanagement"
               ];
@@ -133,6 +186,13 @@
               time.format = "12h";
             };
           }
+      {
+        name = "org.kde.plasma.panelspacer";
+        config.General = {
+          expanding = false;
+          length = 12;
+        };
+      }
         ];
       }
     ];
