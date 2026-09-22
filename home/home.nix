@@ -12,6 +12,7 @@
     ./modules/halloy.nix
     ./modules/bitwarden.nix
     ./modules/git.nix
+    ./modules/mpv.nix
   ];
 
   home = {
@@ -34,7 +35,6 @@
     pinentry-qt
 
     # media
-    mpv
     obs-studio
 
     # terminal & shell
