@@ -183,9 +183,10 @@
           {
             digitalClock = {
               calendar.firstDayOfWeek = "monday";
-              time.format = "12h";
+              time.format = "24h";
             };
           }
+
       {
         name = "org.kde.plasma.panelspacer";
         config.General = {
