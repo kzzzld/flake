@@ -95,7 +95,7 @@
     hotkeys.commands."terminal" = {
       name = "Launch Terminal";
       key = "Meta+Return";
-      command = "kitty";
+      command = "ghostty";
     };
 
     fonts = {
