@@ -2,7 +2,6 @@
   programs.halloy = {
     enable = true;
     settings = {
-      theme = "catppuccin-mocha";
       servers.Libera = {
         nickname = "kzzzl/libera";
         server = "soju.kzzzl.xyz";

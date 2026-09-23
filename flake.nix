@@ -18,6 +18,12 @@
     };
 
     catppuccin.url = "github:catppuccin/nix";
+
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs = {
@@ -25,6 +31,7 @@
     nixpkgs,
     home-manager,
     apple-silicon-support,
+    stylix,
     ...
   } @ inputs: {
     nixosConfigurations.nixpc-btw = nixpkgs.lib.nixosSystem {
@@ -33,10 +40,12 @@
         ./hosts/common.nix
 
         home-manager.nixosModules.home-manager
+        inputs.stylix.nixosModules.stylix
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.extraSpecialArgs = {inherit inputs;};
+          home-manager.backupFileExtension = "backup";
           home-manager.users.kzzzl = import ./home/home.nix;
         }
       ];
@@ -48,10 +57,12 @@
         ./hosts/common.nix
 
         home-manager.nixosModules.home-manager
+        inputs.stylix.nixosModules.stylix
         apple-silicon-support.nixosModules.apple-silicon-support
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
+          home-manager.backupFileExtension = "backup";
           home-manager.extraSpecialArgs = {inherit inputs;};
           home-manager.users.kzzzl = import ./home/home.nix;
         }

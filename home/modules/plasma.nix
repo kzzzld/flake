@@ -20,6 +20,7 @@
 
   programs.plasma = {
     enable = true;
+    overrideConfig = true;
 
     configFile = {
       "breezerc"."Common" = {
@@ -37,23 +38,6 @@
           "floatingClass" = "mpv";
         };
       };
-
-      # "kwinrulesrc" = {
-      #   "1" = {
-      #     Description = "Remove all titlebars";
-      #     noborder = true;
-      #     noborderrule = 2;
-      #     types = 4294967295;
-      #     wmclass = "";
-      #     wmclasscomplete = false;
-      #     wmclassmatch = 0;
-      #   };
-      #
-      #   General = {
-      #     count = 1;
-      #     rules = "1";
-      #   };
-      # };
 
     };
 

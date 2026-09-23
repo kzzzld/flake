@@ -5,9 +5,12 @@
   ...
 }: {
   imports = [
-    ./modules/catppuccin.nix
+    inputs.stylix.homeModules.stylix
+
+
+    # ./modules/catppuccin.nix
     ./modules/plasma.nix
-    ./modules/foot.nix
+#   ./modules/foot.nix
 #   ./modules/kitty.nix
     ./modules/ghostty.nix
     ./modules/halloy.nix
@@ -77,6 +80,19 @@
     # fonts
     nerd-fonts.jetbrains-mono
   ];
+
+  stylix = {
+    enable = true;
+    autoEnable = false;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    targets = {
+      halloy.enable = true;
+      ghostty.enable = true;
+      firefox.enable = true;
+      foot.enable = true;
+    };
+  };
+
 
   home.file.".config/nvim" = {
     source = ./config/nvim;
