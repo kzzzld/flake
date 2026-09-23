@@ -17,7 +17,9 @@
     ./modules/bitwarden.nix
     ./modules/git.nix
     ./modules/mpv.nix
+    ./modules/firefox.nix
   ];
+
 
   home = {
     username = "kzzzl";
