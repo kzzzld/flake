@@ -12,6 +12,11 @@ in {
     enable = true;
     profiles.${profileName} = {
       isDefault = true;
+      
+      search = {
+        default = "DuckDuckGo";
+        force = true;
+      };
 
       extensions = {
         force = true;
