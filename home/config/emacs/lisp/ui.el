@@ -4,7 +4,7 @@
   (add-to-list 'default-frame-alist '(ns-transparent-titlebar . t)))
 
 (set-face-attribute 'default nil
-                    :font "JetBrainsMono Nerd Font"
+                    :font "Iosevka Nerd Font"
                     :height 140
                     :weight 'normal)
 
@@ -15,7 +15,7 @@
 (add-hook 'window-setup-hook #'my/use-terminal-background)
 
 (set-face-attribute 'default nil
-                    :font "JetBrainsMono Nerd Font"
+                    :font "Iosevka Nerd Font"
                     :height 140)
 
 (global-display-line-numbers-mode 1)

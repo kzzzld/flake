@@ -69,7 +69,7 @@
 
     fonts = {
       general = {
-        family = "JetBrainsMono Nerd Font";
+        family = "Iosevka Nerd Font";
         pointSize = 12;
       };
     };

@@ -80,7 +80,7 @@
     libreoffice-stable
 
     # fonts
-    nerd-fonts.jetbrains-mono
+    nerd-fonts.iosevka
   ];
 
   stylix = {
