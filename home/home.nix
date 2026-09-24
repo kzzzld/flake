@@ -2,6 +2,7 @@
   config,
   pkgs,
   inputs,
+  lib,
   ...
 }: {
   imports = [
@@ -91,6 +92,10 @@
       qt.enable = false;
     };
   };
+
+  home.activation.removeConflictingGtkrc = lib.hm.dag.entryBefore ["writeBoundary"] ''
+  rm -f "$HOME/.gtkrc-2.0"
+'';
 
 
   home.file.".config/nvim" = {
