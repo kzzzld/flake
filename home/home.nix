@@ -85,13 +85,10 @@
 
   stylix = {
     enable = true;
-    autoEnable = false;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    autoEnable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
     targets = {
-      halloy.enable = true;
-      ghostty.enable = true;
-      firefox.enable = true;
-      foot.enable = true;
+      qt.enable = false;
     };
   };
 
