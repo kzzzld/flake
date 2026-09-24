@@ -9,10 +9,8 @@
     inputs.stylix.homeModules.stylix
 
 
-    # ./modules/catppuccin.nix
     ./modules/plasma.nix
-#   ./modules/foot.nix
-#   ./modules/kitty.nix
+    ./modules/vesktop.nix
     ./modules/ghostty.nix
     ./modules/halloy.nix
     ./modules/bitwarden.nix
@@ -69,7 +67,6 @@
     # internet
     librewolf
     gajim
-    vesktop
     signal-desktop
     thunderbird
 
