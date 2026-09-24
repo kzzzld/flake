@@ -34,7 +34,6 @@ in {
       settings = {
         "extensions.autoDisableScopes" = 0;
         "extensions.enabledScopes" = 15;
-        "extensions.activeThemeID" = "firefox-compact-dark@mozilla.org";
         "browser.theme.content-theme" = 0;
         "browser.theme.toolbar-theme" = 0;
         "extensions.startupScanScopes" = 15;
@@ -56,6 +55,7 @@ in {
         "browser.newtabpage.enabled" = true;
         "browser.toolbars.bookmarks.visibility" = "never";
         "browser.toolbars.bookmarks.showInPrivateBrowsing" = false;
+        "browser.newtabpage.activity-stream.feeds.topsites" = false;
       };
     };
   };
