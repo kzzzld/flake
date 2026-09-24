@@ -6,16 +6,7 @@
   imports = [inputs.plasma-manager.homeModules.plasma-manager];
 
   home.packages = with pkgs; [
-    (catppuccin-kde.override {
-      flavour = ["mocha"];
-    })
-    (pkgs.catppuccin-papirus-folders.override {
-      flavor = "mocha";
-      accent = "blue";
-    })
-
     kdePackages.krohnkite
-
   ];
 
   programs.plasma = {
@@ -62,12 +53,6 @@
 
     workspace = {
       clickItemTo = "open"; # If you liked the click-to-open default from plasma 5
-      colorScheme = "CatppuccinMochaBlue";
-      windowDecorations = {
-        library = "org.kde.breeze";
-        theme = "Breeze";
-      };
-      iconTheme = "Papirus-Dark";
       wallpaper = ../walls/jellyfish.jpg;
     };
 
