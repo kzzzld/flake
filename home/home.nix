@@ -17,6 +17,7 @@
     ./modules/git.nix
     ./modules/mpv.nix
     ./modules/firefox.nix
+    ./modules/zsh.nix
   ];
 
 
