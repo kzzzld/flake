@@ -66,7 +66,6 @@
     tree-sitter
 
     # internet
-    librewolf
     gajim
     signal-desktop
     thunderbird
@@ -104,5 +103,4 @@
     source = ./config/emacs;
     recursive = true;
   };
-  home.file.".zshrc".source = ./config/zsh/zshrc;
 }
