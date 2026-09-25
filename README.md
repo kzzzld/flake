@@ -10,9 +10,6 @@ My own NixOS configuration.
 > Other configurations will exist as archive. But, you may have problems when you try to use it.
 > To check am I actively using it, you can see bottom of [home.nix](./home/home.nix) file. If that line is commented, then I'm not using it.
 
-> [!NOTE]
-> I can't make Stylus declerative. So if you want to use Catppuccin in all websites, you can use [Catppuccin User Style Customizer](https://catppuccin-userstyles-customizer.uncenter.dev/) and import it manually. For my config, use Mocha Blue.
-
 ## Installation
 
 > [!NOTE]
