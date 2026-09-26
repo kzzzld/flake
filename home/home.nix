@@ -1,14 +1,11 @@
 {
   config,
   pkgs,
-  inputs,
   lib,
   ...
 }: {
   imports = [
-    inputs.stylix.homeModules.stylix
-
-
+    ./modules/stylix.nix
     ./modules/plasma.nix
     ./modules/vesktop.nix
     ./modules/ghostty.nix
@@ -80,15 +77,6 @@
     # fonts
     nerd-fonts.iosevka
   ];
-
-  stylix = {
-    enable = true;
-    autoEnable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/black-metal.yaml";
-    targets = {
-      qt.enable = false;
-    };
-  };
 
   home.activation.removeConflictingGtkrc = lib.hm.dag.entryBefore ["writeBoundary"] ''
   rm -f "$HOME/.gtkrc-2.0"
