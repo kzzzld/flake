@@ -1,4 +1,8 @@
-{ pkgs, lib, ... }: let
+{
+  pkgs,
+  lib,
+  ...
+}: let
   cursorShader = pkgs.fetchFromGitHub {
     owner = "sahaj-b";
     repo = "ghostty-cursor-shaders";
@@ -9,16 +13,16 @@ in {
   programs.ghostty = {
     enable = true;
     settings = {
-        font-size = 12;
-        background-opacity = 0.9;
-        cursor-style = "block";
-        shell-integration-features = "no-cursor";
-        font-family = lib.mkForce "Iosevka Nerd Font";
+      font-size = 12;
+      background-opacity = 0.9;
+      cursor-style = "block";
+      shell-integration-features = "no-cursor";
+      font-family = lib.mkForce "Iosevka Nerd Font";
 
-        # custom-shader = "${cursorShader}/cursor_sweep.glsl";
-        # custom-shader = "${cursorShader}/cursor_tail.glsl"; # kitty like
-        custom-shader = "${cursorShader}/cursor_warp.glsl"; # neovide like
-        # custom-shader = "${cursorShader}/ripple_cursor.glsl";
+      # custom-shader = "${cursorShader}/cursor_sweep.glsl";
+      # custom-shader = "${cursorShader}/cursor_tail.glsl"; # kitty like
+      custom-shader = "${cursorShader}/cursor_warp.glsl"; # neovide like
+      # custom-shader = "${cursorShader}/ripple_cursor.glsl";
     };
   };
 }

@@ -1,18 +1,22 @@
-{ pkgs, inputs, stylix, ... }: let
+{
+  pkgs,
+  inputs,
+  stylix,
+  ...
+}: let
   profileName = "default-release";
 in {
-
   stylix.targets.firefox = {
     colorTheme.enable = true;
     colors.enable = true;
-    profileNames = [ "${profileName}" ];
+    profileNames = ["${profileName}"];
   };
 
   programs.firefox = {
     enable = true;
     profiles.${profileName} = {
       isDefault = true;
-      
+
       search = {
         default = "DuckDuckGo";
         force = true;
@@ -21,13 +25,13 @@ in {
       extensions = {
         force = true;
         packages = with inputs.firefox-addons.packages.${pkgs.system}; [
-        ublock-origin
-        bitwarden
-        darkreader
-        sponsorblock
-        return-youtube-dislikes
-        clearurls
-        stylus
+          ublock-origin
+          bitwarden
+          darkreader
+          sponsorblock
+          return-youtube-dislikes
+          clearurls
+          stylus
         ];
       };
 

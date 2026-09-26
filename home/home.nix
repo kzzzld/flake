@@ -17,7 +17,6 @@
     ./modules/zsh.nix
   ];
 
-
   home = {
     username = "kzzzl";
     homeDirectory = "/home/kzzzl";
@@ -79,9 +78,8 @@
   ];
 
   home.activation.removeConflictingGtkrc = lib.hm.dag.entryBefore ["writeBoundary"] ''
-  rm -f "$HOME/.gtkrc-2.0"
-'';
-
+    rm -f "$HOME/.gtkrc-2.0"
+  '';
 
   home.file.".config/nvim" = {
     source = ./config/nvim;

@@ -1,10 +1,10 @@
-{ ... }: {
+{...}: {
   programs.zsh = {
     enable = true;
 
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
-    
+
     shellAliases = {
       "ls" = "eza -l --icons=always --color=always";
     };

@@ -23,9 +23,6 @@
       kdeglobals.General.toolBarFont = "Iosevka Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
       kdeglobals.WM.activeFont = "Iosevka Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
 
-
-
-
       "breezerc"."Common" = {
         ShadowSize = "ShadowNone";
         ShadowStrength = 0;
@@ -42,11 +39,9 @@
           "floatingClass" = "mpv";
         };
       };
-
     };
 
-
-     window-rules = [
+    window-rules = [
       {
         description = "Remove Titlebar";
         match = {
@@ -160,14 +155,13 @@
       {
         location = "top";
         widgets = [
-
-        {
-        name = "org.kde.plasma.panelspacer";
-        config.General = {
-          expanding = false;
-          length = 12;
-        };
-      }
+          {
+            name = "org.kde.plasma.panelspacer";
+            config.General = {
+              expanding = false;
+              length = 12;
+            };
+          }
 
           "org.kde.plasma.pager"
 
