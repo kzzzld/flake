@@ -7,9 +7,6 @@
       arRPC = false;
       customTitlebar = true;
       tray = false;
-      themeLinks = [
-        "https://raw.githubusercontent.com/Dyzean/Tokyo-Night/main/themes/tokyo-night.theme.css"
-      ];
       useQuickCss = true;
       plugins = {
         ClearURLs.enable = true;
