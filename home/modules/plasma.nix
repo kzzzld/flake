@@ -14,10 +14,23 @@
     overrideConfig = true;
 
     configFile = {
+      # "kdeglobals"."General"."taskbarFont" = "Iosevka Nerd Font,11,-1,5,50,0,0,0,0,0";
+      kdeglobals.General.fixed = "Iosevka Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+      kdeglobals.General.font = "Iosevka Nerd Font,12,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+      kdeglobals.General.menuFont = "Iosevka Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+      kdeglobals.General.smallestReadableFont = "Iosevka Nerd Font,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+      kdeglobals.General.taskbarFont = "Iosevka Nerd Font,11,-1,5,50,0,0,0,0,0";
+      kdeglobals.General.toolBarFont = "Iosevka Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+      kdeglobals.WM.activeFont = "Iosevka Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
+
+
+
+
       "breezerc"."Common" = {
         ShadowSize = "ShadowNone";
         ShadowStrength = 0;
       };
+
       "kwinrc" = {
         "Windows"."FocusPolicy" = "FocusFollowsMouse";
 
@@ -71,6 +84,26 @@
       general = {
         family = "Iosevka Nerd Font";
         pointSize = 12;
+      };
+      fixedWidth = {
+        family = "Iosevka Nerd Font";
+        pointSize = 10;
+      };
+      menu = {
+        family = "Iosevka Nerd Font";
+        pointSize = 10;
+      };
+      small = {
+        family = "Iosevka Nerd Font";
+        pointSize = 8;
+      };
+      toolbar = {
+        family = "Iosevka Nerd Font";
+        pointSize = 10;
+      };
+      windowTitle = {
+        family = "Iosevka Nerd Font";
+        pointSize = 10;
       };
     };
 
@@ -157,16 +190,21 @@
             digitalClock = {
               calendar.firstDayOfWeek = "monday";
               time.format = "24h";
+              font = {
+                family = "Iosevka Nerd Font";
+                weight = 400;
+                size = 9;
+              };
             };
           }
 
-      {
-        name = "org.kde.plasma.panelspacer";
-        config.General = {
-          expanding = false;
-          length = 12;
-        };
-      }
+          {
+            name = "org.kde.plasma.panelspacer";
+            config.General = {
+              expanding = false;
+              length = 12;
+            };
+          }
         ];
       }
     ];
