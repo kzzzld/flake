@@ -2,8 +2,8 @@
 
 My own NixOS configuration.
 
-<img width="2560" height="1663" alt="Image" src="https://github.com/user-attachments/assets/7334f701-7662-4385-8b37-e59b64e994d3" />
-<img width="2560" height="1663" alt="Image" src="https://github.com/user-attachments/assets/8f8f0bcc-179a-41af-bff2-f08d50be9cf8" />
+<img width="2560" height="1663" alt="Image" src="https://github.com/user-attachments/assets/c71b3565-9192-49b0-a791-1d0bbee413b0" />
+<img width="2560" height="1663" alt="Image" src="https://github.com/user-attachments/assets/545de417-dd5a-4637-90c7-b8a6bd0f15e9" />
 
 > [!NOTE]
 > I don't use all configurations here in [config](./home/config) folder. I only use some of them.
