@@ -17,8 +17,6 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    catppuccin.url = "github:catppuccin/nix";
-
     stylix = {
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -28,6 +26,8 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixvim.url = "github:nix-community/nixvim";
   };
 
   outputs = {
