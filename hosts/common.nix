@@ -38,6 +38,8 @@
   programs.mango.enable = true;
   services.desktopManager.plasma6.enable = true;
 
+  # Display manager.
+  services.displayManager.ly.enable = true;
   services.xserver.displayManager.lightdm.enable = false;
 
   nixpkgs.overlays = [
