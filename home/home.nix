@@ -17,6 +17,7 @@
     ./modules/mpv.nix
     ./modules/firefox.nix
     ./modules/vscode.nix
+    ./modules/neovim.nix
     ./modules/zsh.nix
   ];
 
@@ -51,11 +52,13 @@
     fzf
 
     # programming
-    neovim
     emacs-pgtk
     nodejs
     cargo
     stylua
+    clang-tools
+    alejandra
+    nixd
     gcc
     cmake
     gnumake
@@ -80,10 +83,6 @@
     rm -f "$HOME/.gtkrc-2.0"
   '';
 
-  home.file.".config/nvim" = {
-    source = ./config/nvim;
-    recursive = true;
-  };
   home.file.".emacs.d" = {
     source = ./config/emacs;
     recursive = true;
