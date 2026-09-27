@@ -3,6 +3,8 @@
   inputs,
   ...
 }: {
+  # NOTE: Font settings are in ./font.nix file.
+
   imports = [
     inputs.stylix.homeModules.stylix
   ];
