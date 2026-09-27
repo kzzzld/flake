@@ -5,6 +5,7 @@
   ...
 }: {
   imports = [
+    ./modules/font.nix
     ./modules/stylix.nix
     ./modules/plasma.nix
     ./modules/vesktop.nix
