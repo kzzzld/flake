@@ -15,6 +15,7 @@
     ./modules/git.nix
     ./modules/mpv.nix
     ./modules/firefox.nix
+    ./modules/vscode.nix
     ./modules/zsh.nix
   ];
 
@@ -52,7 +53,6 @@
     # programming
     neovim
     emacs-pgtk
-    vscode
     nodejs
     cargo
     stylua
@@ -61,6 +61,7 @@
     gnumake
     libtool
     tree-sitter
+    lua-language-server
 
     # internet
     gajim
@@ -73,9 +74,6 @@
 
     # office
     libreoffice-stable
-
-    # fonts
-    nerd-fonts.iosevka
   ];
 
   home.activation.removeConflictingGtkrc = lib.hm.dag.entryBefore ["writeBoundary"] ''
