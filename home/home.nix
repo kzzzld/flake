@@ -49,6 +49,7 @@
     starship
     zoxide
     lazygit
+    fzf
 
     # programming
     neovim
