@@ -72,7 +72,7 @@
     hotkeys.commands."terminal" = {
       name = "Launch Terminal";
       key = "Meta+Return";
-      command = "ghostty";
+      command = "kitty";
     };
 
     fonts = {
