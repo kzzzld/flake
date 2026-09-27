@@ -10,6 +10,7 @@
     ./modules/plasma.nix
     ./modules/vesktop.nix
     ./modules/ghostty.nix
+    ./modules/tmux.nix
     ./modules/halloy.nix
     ./modules/bitwarden.nix
     ./modules/git.nix
@@ -43,8 +44,6 @@
 
     # terminal & shell
     fastfetch
-    tmux
-    tmuxinator
     eza
     starship
     zoxide
