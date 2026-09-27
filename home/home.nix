@@ -9,7 +9,7 @@
     ./modules/stylix.nix
     ./modules/plasma.nix
     ./modules/vesktop.nix
-    ./modules/ghostty.nix
+    ./modules/kitty.nix
     ./modules/tmux.nix
     ./modules/halloy.nix
     ./modules/bitwarden.nix
