@@ -7,6 +7,7 @@
 
     shellAliases = {
       "ls" = "eza -l --icons=always --color=always";
+      "mux" = "tmuxinator";
     };
 
     sessionVariables = {
