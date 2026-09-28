@@ -82,9 +82,4 @@
   home.activation.removeConflictingGtkrc = lib.hm.dag.entryBefore ["writeBoundary"] ''
     rm -f "$HOME/.gtkrc-2.0"
   '';
-
-  home.file.".emacs.d" = {
-    source = ./config/emacs;
-    recursive = true;
-  };
 }
