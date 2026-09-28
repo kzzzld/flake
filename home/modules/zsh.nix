@@ -12,7 +12,7 @@
 
     sessionVariables = {
       EDITOR = "nvim";
-      PATH = "$PATH:/opt/homebrew/lib/ruby/gems/4.0.0/bin:$HOME/Git/signal-cli/bin:$HOME/.cargo/bin:$HOME/.local/bin";
+      PATH = "$PATH:$HOME/.local/bin";
     };
 
     initExtra = ''
