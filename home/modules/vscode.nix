@@ -48,11 +48,6 @@
         }
 
         {
-          "before" = [ "<C-h>" ];
-          "commands" = [ "workbench.action.focusLeftGroup" ];
-        }
-
-        {
           "before" = [ "<C-j>" ];
           "commands" = [ "workbench.action.focusBelowGroup" ];
         }
