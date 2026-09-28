@@ -65,6 +65,9 @@
     tree-sitter
     lua-language-server
 
+    # AI
+    codex
+
     # internet
     gajim
     signal-desktop
