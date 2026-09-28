@@ -52,7 +52,6 @@
     fzf
 
     # programming
-    emacs-pgtk
     nodejs
     cargo
     stylua
