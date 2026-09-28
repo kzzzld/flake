@@ -34,13 +34,10 @@
   services.udisks2.enable = true;
 
   # Enable Window managers.
-  programs.sway.enable = true;
-  programs.mango.enable = true;
   services.desktopManager.plasma6.enable = true;
 
   # Display manager.
   services.displayManager.ly.enable = true;
-  services.xserver.displayManager.lightdm.enable = false;
 
   nixpkgs.overlays = [
     (self: super: {
