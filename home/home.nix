@@ -10,6 +10,7 @@
     ./modules/plasma.nix
     ./modules/vesktop.nix
     ./modules/kitty.nix
+    ./modules/starship.nix
     ./modules/tmux.nix
     ./modules/halloy.nix
     ./modules/bitwarden.nix
@@ -46,7 +47,6 @@
     # terminal & shell
     fastfetch
     eza
-    starship
     zoxide
     lazygit
     fzf
