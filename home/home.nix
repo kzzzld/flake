@@ -5,21 +5,13 @@
   ...
 }: {
   imports = [
-    ./modules/font.nix
-    ./modules/stylix.nix
-    ./modules/plasma.nix
-    ./modules/vesktop.nix
-    ./modules/kitty.nix
-    ./modules/starship.nix
-    ./modules/tmux.nix
-    ./modules/halloy.nix
-    ./modules/bitwarden.nix
-    ./modules/git.nix
-    ./modules/mpv.nix
-    ./modules/firefox.nix
-    ./modules/vscode.nix
-    ./modules/neovim.nix
-    ./modules/zsh.nix
+    ./modules/desktop
+    ./modules/theme
+    ./modules/communication
+    ./modules/terminal
+    ./modules/shell
+    ./modules/util
+    ./modules/browser
   ];
 
   home = {
