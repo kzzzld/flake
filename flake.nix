@@ -45,7 +45,7 @@
     nixosConfigurations.nixpc-btw = nixpkgs.lib.nixosSystem {
       modules = [
         ./hosts/nixpc-btw/configuration.nix
-        ./hosts/common.nix
+        ./hosts/common/configuration.nix
 
         home-manager.nixosModules.home-manager
         inputs.stylix.nixosModules.stylix
@@ -62,7 +62,7 @@
     nixosConfigurations.nixmac-btw = nixpkgs.lib.nixosSystem {
       modules = [
         ./hosts/nixmac-btw/configuration.nix
-        ./hosts/common.nix
+        ./hosts/common/configuration.nix
 
         home-manager.nixosModules.home-manager
         inputs.stylix.nixosModules.stylix
