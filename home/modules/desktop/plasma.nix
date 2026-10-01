@@ -61,7 +61,7 @@
 
     workspace = {
       clickItemTo = "open"; # If you liked the click-to-open default from plasma 5
-      wallpaper = ../walls/black-moon.png;
+      wallpaper = ../../walls/black-moon.png;
     };
 
     kwin.virtualDesktops = {
