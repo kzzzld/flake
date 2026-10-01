@@ -1,9 +1,9 @@
-{ pkgs, ... }: {
-  home.packages = [ pkgs.nerd-fonts.iosevka ];
+{pkgs, ...}: {
+  home.packages = [pkgs.nerd-fonts.iosevka];
   fonts.fontconfig.enable = true;
   fonts.fontconfig.defaultFonts = {
-    sansSerif = [ "Iosevka Nerd Font" ];
-    monospace = [ "Iosevka Nerd Font" ];
+    sansSerif = ["Iosevka Nerd Font"];
+    monospace = ["Iosevka Nerd Font"];
   };
 
   stylix.fonts = {

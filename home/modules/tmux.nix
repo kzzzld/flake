@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.tmux = {
     enable = true;
     prefix = "C-a";
@@ -17,19 +17,16 @@
     tmuxinator = {
       enable = true;
       projects = {
-
         flake = {
           name = "flake";
           root = "~/flake";
 
           windows = [
-            { editor = "nvim"; }
-            { shell = ""; }
-            { git = "lazygit"; }
+            {editor = "nvim";}
+            {shell = "";}
+            {git = "lazygit";}
           ];
-
         };
-
       };
     };
 
@@ -48,6 +45,5 @@
     '';
 
     terminal = "tmux-256color";
-
   };
 }
